@@ -20,14 +20,14 @@ export class LoggerService implements LS {
       transports: [
         new winston.transports.Console({
           level: 'debug',
-          format: combine(nestWinstonModuleUtilities.format.nestLike('Nest-BoilerPlate')),
+          format: combine(nestWinstonModuleUtilities.format.nestLike('lo-era-auth')),
         }),
       ],
     });
 
-    console.log = (message: any, params?: any) => {
-      this.logger.debug(message, params);
-    };
+    // console.log = (message: any, params?: any) => {
+    //   this.logger.debug(message, params);
+    // };
   }
 
   log(message: string) {

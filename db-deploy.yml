@@ -4,8 +4,11 @@ services:
   db:
     image: mysql
     restart: always
-    ports:
-      - 33006:3306
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - lo-era
     volumes:
       - db_volume:/var/lib/mysql
       - ./mysql/config:/etc/mysql/conf.d
@@ -13,7 +16,12 @@ services:
     command: --init-file /data/application/init.sql
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: lo_era
+      MYSQL_DATABASE: lo-era
       time_zone: UTC
+
 volumes:
   db_volume:
+
+networks:
+  lo-era:
+    external: true

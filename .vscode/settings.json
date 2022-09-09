@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true
+    },
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "file:///Users/heavyrisem/Desktop/Study/lo-era/auth/docker-deploy.yml"
+    }
+}

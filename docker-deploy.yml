@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  server:
+    image: docker.dyhs.kr/withme/withme_backend:latest
+    deploy:
+      mode: replicated
+      replicas: 2
+    networks:
+      - lo-era
+      - nginx
+    depends_on:
+      - db
+    env_file:
+      - .env.production
+
+networks:
+  lo-era:
+    external: true
+  nginx:
+    external: true

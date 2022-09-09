@@ -11,5 +11,11 @@ export class User extends CoreEntity {
   name: string;
 
   @Column()
-  password: string;
+  provider: string;
+
+  @Column({ nullable: true })
+  providerId?: string;
+
+  @Column({ nullable: true })
+  password?: string;
 }

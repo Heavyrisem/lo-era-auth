@@ -5,7 +5,7 @@ COPY . .
 RUN rm -f .env.development
 RUN rm -f .env.production
 
-RUN ln -s /usr/bin/nodejs /usr/local/bin/node
+RUN apk add nodejs
 
 RUN yarn install
 RUN yarn build

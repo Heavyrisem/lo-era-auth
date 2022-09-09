@@ -47,3 +47,8 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_VERSION }}
+
+      - name: Push Latest
+        run: |
+          docker tag ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_VERSION }} ${{ env.DOCKER_IMAGE }}:latest
+          docker push ${{ env.DOCKER_IMAGE}}:latest

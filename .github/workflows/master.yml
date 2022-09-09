@@ -3,7 +3,7 @@ name: Build And Push
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
   # workflow_dispatch:
 
 env:
@@ -50,5 +50,6 @@ jobs:
 
       - name: Push Latest
         run: |
+          docker image ls
           docker tag ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_VERSION }} ${{ env.DOCKER_IMAGE }}:latest
           docker push ${{ env.DOCKER_IMAGE}}:latest

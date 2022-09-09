@@ -9,6 +9,7 @@
         "**/node_modules": true
     },
     "yaml.schemas": {
-        "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "file:///Users/heavyrisem/Desktop/Study/lo-era/auth/docker-deploy.yml"
+        "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "file:///Users/heavyrisem/Desktop/Study/lo-era/auth/docker-deploy.yml",
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/heavyrisem/Desktop/Study/lo-era/auth/.github/master.yml"
     }
 }

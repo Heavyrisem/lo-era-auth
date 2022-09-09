@@ -2,7 +2,7 @@ version: '3'
 
 services:
   server:
-    image: docker.dyhs.kr/withme/withme_backend:latest
+    image: ghcr.io/heavyrisem/lo-era-auth:latest
     deploy:
       mode: replicated
       replicas: 2

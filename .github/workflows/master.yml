@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/arm64/v8
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_VERSION }}

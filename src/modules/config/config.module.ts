@@ -17,6 +17,7 @@ import * as Joi from 'joi';
         DB_NAME: Joi.string().required(),
         GOOGLE_CLIENT_ID: Joi.string().required(),
         GOOGLE_SECRET: Joi.string().required(),
+        GOOGLE_REDIRECT: Joi.string().required(),
         JWT_PRIVATE_KEY: Joi.string().required(),
         JWT_PUBLIC_KEY: Joi.string().required(),
         JWT_EXPIRES_IN: Joi.string().required(),
